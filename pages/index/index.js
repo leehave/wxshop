@@ -20,6 +20,7 @@ Page({
     hasNoCoupons:true,
     coupons: [],
     searchInput: '',
+    noticeList:[]
   },
 
   tabClick: function (e) {
@@ -64,8 +65,9 @@ Page({
   onLoad: function () {
     var that = this
     wx.setNavigationBarTitle({
-      title: wx.getStorageSync('mallName')
+      title: 'KMD商城演示版'
     })
+    
     /*
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
@@ -236,7 +238,7 @@ Page({
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/notice/list',
-      data: { pageSize :5},
+      
       success: function (res) {
         if (res.data.code == 0) {
           that.setData({

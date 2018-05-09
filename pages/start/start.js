@@ -39,7 +39,7 @@ Page({
       else if(angle<-14){ angle=-14; }
       if(that.data.angle !== angle){
         that.setData({
-          angle: angle
+          angle: angle,
         });
       }
     });

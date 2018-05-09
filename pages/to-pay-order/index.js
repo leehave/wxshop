@@ -32,6 +32,7 @@ Page({
       //购物车下单
       var shopCarInfoMem = wx.getStorageSync('shopCarInfo');
       that.data.kjId = buyNowInfoMem.kjId;
+      console.log(that.data);
       if (shopCarInfoMem && shopCarInfoMem.shopList) {
         // shopList = shopCarInfoMem.shopList
         shopList = shopCarInfoMem.shopList.filter(entity => {

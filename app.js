@@ -189,7 +189,7 @@ App({
   },
   globalData:{
     userInfo:null,
-    subDomain: "tz", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
+    subDomain: "lzxshop", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
     version: "2.0",
     shareProfile: '百款精品商品，总有一款适合您' // 首页转发的时候话术
   }
@@ -199,4 +199,6 @@ App({
   2、/pages/order-details/index.js 中已添加用户确认收货后提供用户参与评价；评价后提醒消费者好评奖励积分已到账；
   3、请自行修改上面几处的模板消息ID，参数为您自己的变量设置即可。  
    */
+  // 打开调试
+
 })

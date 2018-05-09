@@ -1,15 +1,15 @@
 const app = getApp()
 
 Page({
-	data: {
-    balance:0,
-    freeze:0,
-    score:0,
-    score_sign_continuous:0
+  data: {
+    balance: 0,
+    freeze: 0,
+    score: 0,
+    score_sign_continuous: 0
   },
-	onLoad() {
+  onLoad() {
     
-	},	
+  },
   onShow() {
     this.getUserInfo();
     this.setData({
@@ -18,29 +18,23 @@ Page({
     this.getUserApiInfo();
     this.getUserAmount();
     this.checkScoreSign();
-  },	
-  getUserInfo: function (cb) {
-      var that = this
-      wx.login({
-        success: function () {
-          wx.getUserInfo({
-            success: function (res) {
-              that.setData({
-                userInfo: res.userInfo
-              });
-            }
-          })
-        }
-      })
   },
-  aboutUs : function () {
-    wx.showModal({
-      title: '关于我们',
-      content: '本系统基于开源小程序商城系统 https://github.com/EastWorld/wechat-app-mall 搭建，祝大家使用愉快！',
-      showCancel:false
+  getUserInfo: function (cb) {
+    var that = this
+    wx.login({
+      success: function () {
+        wx.getUserInfo({
+          success: function (res) {
+            that.setData({
+              userInfo: res.userInfo
+            });
+          }
+        })
+      }
     })
   },
-  getPhoneNumber: function(e) {
+ 
+  getPhoneNumber: function (e) {
     if (!e.detail.errMsg || e.detail.errMsg != "getPhoneNumber:ok") {
       wx.showModal({
         title: '提示',
@@ -149,7 +143,7 @@ Page({
       }
     })
   },
-  relogin:function(){
+  relogin: function () {
     var that = this;
     wx.authorize({
       scope: 'scope.userInfo',
@@ -167,7 +161,7 @@ Page({
           }
         })
       },
-      fail(res){
+      fail(res) {
         console.log(res);
         wx.openSetting({});
       }
