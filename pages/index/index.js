@@ -65,7 +65,7 @@ Page({
   onLoad: function () {
     var that = this
     wx.setNavigationBarTitle({
-      title: 'KMD商城演示版'
+      title: wx.getStorageSync('mallName')
     })
     
     /*

@@ -29,7 +29,7 @@ Page({
 
   //事件处理函数
   swiperchange: function(e) {
-      //console.log(e.detail.current)
+      console.log(e.detail.current)
        this.setData({  
         swiperCurrent: e.detail.current  
     })  
@@ -86,7 +86,7 @@ Page({
       }
     })
     this.reputation(e.id);
-    this.getKanjiaInfo(e.id);
+    // this.getKanjiaInfo(e.id);
   },
   goShopCar: function () {
     wx.reLaunch({
